@@ -1,0 +1,108 @@
+:root {
+  --main-color: rgb(133, 89, 153);
+  --darker-color: rgb(83, 46, 100);
+  --lighter-color: rgb(220, 158, 255);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Pompiere", "Courier New", Courier, monospace;
+  font-size: 1.8rem;
+  background: url(./img/background.jpg) center/cover no-repeat;
+  min-height: 100dvh;
+  text-align: center;
+  overflow: hidden;
+}
+.intro {
+  height: 100dvh;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+}
+
+main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(13, 13, 13, 0.8);
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.botonera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  max-height: 10dvh;
+}
+.texto {
+  overflow: auto;
+  padding: 1rem;
+  flex: 1;
+  max-height: 30dvh;
+}
+
+button {
+  background-color: var(--main-color);
+  border: 2px solid var(--darker-color);
+  color: whitesmoke;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+button:hover {
+  box-shadow: 0 0 10px 2px whitesmoke;
+  border: 2px solid var(--lighter-color);
+}
+button:active {
+  background-color: var(--darker-color);
+  border: 2px solid var(--darker-color);
+  box-shadow: none;
+}
+
+@media (min-width: 425px) {
+  body {
+    display: flex;
+    align-items: center;
+    max-width: 1024px;
+  }
+  .intro {
+    height: 90dvh;
+  }
+  main {
+    flex-direction: row-reverse;
+    border: 2px solid var(--main-color);
+    min-height: max-content;
+  }
+  .image {
+    border-left: 2px solid var(--main-color);
+    max-width: 500px;
+    max-height: 600px;
+  }
+  .image img {
+    object-fit: cover;
+    max-height: max-content;
+  }
+  .botonera {
+    border-top: none;
+  }
+}
