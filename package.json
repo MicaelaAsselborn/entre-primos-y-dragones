@@ -1,8 +1,8 @@
 {
   "name": "entre-primos-y-dragones",
-  "homepage": "https://MicaelaAsselborn.github.io/entre-primos-y-dragones",
   "private": true,
   "version": "0.0.0",
+  "homepage": "/deploy-entre-primos-y-dragones",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
