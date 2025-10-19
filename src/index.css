@@ -36,6 +36,21 @@ main {
   background-color: rgba(13, 13, 13, 0.8);
   color: whitesmoke;
   overflow: hidden;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+.inventario {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--main-color);
+  p {
+    margin: 0.5rem;
+  }
+}
+span {
+  font-weight: bold;
 }
 
 .image {
@@ -54,9 +69,12 @@ main {
   border-bottom: 2px solid var(--main-color);
   max-height: 10dvh;
 }
+.acciones {
+  border-top: none;
+}
 .texto {
   overflow: auto;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   flex: 1;
   max-height: 30dvh;
 }
@@ -92,6 +110,7 @@ button:active {
     flex-direction: row-reverse;
     border: 2px solid var(--main-color);
     min-height: max-content;
+    padding: 0;
   }
   .image {
     border-left: 2px solid var(--main-color);

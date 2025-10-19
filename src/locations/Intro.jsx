@@ -1,8 +1,21 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import introAudio from "../audios/endGame.mp3";
 
 function Intro() {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const audio = new Audio(introAudio);
+    audio.loop = true;
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  });
   return (
     <main>
       <div className="intro">

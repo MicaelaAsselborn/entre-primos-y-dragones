@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import townImage from "../img/town.jpg";
 import townAudio from "../audios/town.mp3";
 
+import Inventario from "../components/Inventario";
+
 function Town() {
   const navigate = useNavigate();
 
@@ -26,8 +28,9 @@ function Town() {
       <div className="container-lg">
         <div className="botonera">
           <button onClick={() => navigate("/shop")}>Tienda</button>
-          <button onClick={() => navigate("/bosque")}>Bosque</button>
+          <button onClick={() => navigate("/forest")}>Bosque</button>
         </div>
+        <Inventario />
         <div className="texto">
           <p>
             La plaza principal bulle con la actividad de mis familiares. Entran
